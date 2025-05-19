@@ -25,7 +25,7 @@ const Search = () => {
     <View style={styles.searchContainer}>
       <Image source={isSBActive ? require("../assets/activeSearch.png") : require("../assets/search.png")} style={styles.searchIcon}/>
       <View style={styles.searchInputContainer}>
-        <TextInput placeholder={"What are you looking for?"} value={searchVal} onChangeText={(val) => handleSearchValue(val)} style={styles.searchInput} onFocus={() => setIsSBActive(true)}/>
+        <TextInput placeholder={"What are you looking for?"} value={searchVal} onChangeText={(val) => handleSearchValue(val)} style={searchVal == "" ? styles.searchInput : styles.searchInputFilled} onFocus={() => setIsSBActive(true)}/>
         {searchVal !== "" ? <Pressable onPress={() => handleSearchValue("")}><Image source={require("../assets/clear.png")} style={styles.clearIcon}/></Pressable> :<View></View>}
       </View>
     </View>
@@ -56,6 +56,15 @@ const styles = StyleSheet.create({
     width: "100%",
     fontFamily: "Roboto_400Regular",
     color: "#888888",
+    height: "24px",
+    fontSize: "17px",
+    fontWeight: "100",
+    outlineStyle: "none"
+  },
+  searchInputFilled: {
+    width: "100%",
+    fontFamily: "Roboto_400Regular",
+    color: "black",
     height: "24px",
     fontSize: "17px",
     fontWeight: "100",

@@ -1,7 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, SafeAreaView, Button, View, ScrollView, Image } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View, ScrollView, Image } from 'react-native';
 import { useFonts, Roboto_400Regular } from '@expo-google-fonts/roboto';
 import NavBar from "./components/NavBar.js";
+import LoginIsland from './components/LoginIsland.js';
 
 export default function App() {
 
@@ -27,7 +27,15 @@ export default function App() {
         </View>
       </View>
       <ScrollView contentContainerStyle={styles.viewPage}>
-        <Text>ScrollView</Text>
+        <View style={styles.loginIsland}>
+          <LoginIsland />
+        </View>
+        <View style={styles.bot1banner}>
+
+        </View>
+        <View style={styles.bot2banner}>
+
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -43,7 +51,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: '100%',
-    minHeight: '100vh',
+    height: '100vh',
+    minHeight: "1500px",
     backgroundColor: "#252934",
     zIndex: '1'
   },
@@ -89,5 +98,26 @@ const styles = StyleSheet.create({
     minWidth: '50vw',
     alignItems: "center",
     minWidth: "1300px"
+  },
+  loginIsland: {
+    backgroundColor: "#252934",
+    height: "100vh",
+    width: "100%",
+    marginTop: "116px",
+    alignItems: "center",
+    justifyContent: "center",
+    flex: 1,
+  },
+  bot1banner: {
+    backgroundColor: "#363b49",
+    height: "23vh",
+    width: "100%",
+    minHeight: "310px"
+  }, 
+  bot2banner: {
+    backgroundColor: "#1B1E27",
+    height: "11vh",
+    width: "100%",
+    minHeight: "130px"
   }
 });

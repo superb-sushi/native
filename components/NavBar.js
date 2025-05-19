@@ -71,15 +71,14 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     flexDirection: "row",
-    width: "7%",
     alignItems: "center",
-    justifyContent: "space-between",
   },
   logo1: {
     width: "60px",
     height: "60px",
   },
   logo2: {
+    marginLeft: "8px",
     width: "60px",
     height: "60px"
   },
@@ -107,7 +106,7 @@ const styles = StyleSheet.create({
   },
   loginBtn: {
     backgroundColor: "#dd2c30",
-    height: "65%",
+    height: "52px",
     justifyContent: "center",
     alignItems: "center",
     borderRadius: "5px"
