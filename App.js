@@ -2,6 +2,7 @@ import { StyleSheet, Text, SafeAreaView, View, ScrollView, Image } from 'react-n
 import { useFonts, Roboto_400Regular } from '@expo-google-fonts/roboto';
 import NavBar from "./components/NavBar.js";
 import LoginIsland from './components/LoginIsland.js';
+import Bot1banner from "./components/Bot1banner.js";
 
 export default function App() {
 
@@ -31,7 +32,7 @@ export default function App() {
           <LoginIsland />
         </View>
         <View style={styles.bot1banner}>
-
+          <Bot1banner />
         </View>
         <View style={styles.bot2banner}>
 
@@ -112,7 +113,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#363b49",
     height: "23vh",
     width: "100%",
-    minHeight: "310px"
+    minHeight: "310px",
+    justifyContent: "center",
+    alignItems: "center"
   }, 
   bot2banner: {
     backgroundColor: "#1B1E27",
