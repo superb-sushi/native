@@ -2,7 +2,7 @@ import { StyleSheet, Text, SafeAreaView, View, ScrollView, Image } from 'react-n
 import { useFonts, Roboto_400Regular } from '@expo-google-fonts/roboto';
 import NavBar from "./components/NavBar.js";
 import LoginIsland from './components/LoginIsland.js';
-import Bot1banner from "./components/Bot1banner.js";
+import Bot1banner from './components/Bot1banner.js';
 
 export default function App() {
 
@@ -19,7 +19,7 @@ export default function App() {
       <View style={styles.navbar}>
         <View style={styles.navbartop}>
           <Image style={styles.dragon} source={require("./assets/dragon.png")}/>
-          <Text style={styles.navbartopText}>A XXXXX Government Agency Website</Text>
+          <Text style={styles.navbartopText}>A XXXXX Government Agency Website <Text style={styles.blueUnderline}>How to identify</Text></Text>
         </View>
         <View style={styles.navbarbot}>
           <View style={styles.navSection}>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   navbartopText: {
     fontFamily: "Roboto_400Regular",
     color: "#404040",
-    fontSize: '15px',
+    fontSize: '14px',
     letterSpacing: '0.75px',
     fontWeight: '100'
   },
@@ -76,6 +76,10 @@ const styles = StyleSheet.create({
     height: '20px',
     width: '20px',
     marginRight: '7px'
+  },
+  blueUnderline: {
+    textDecorationLine: "underline",
+    color: "#5057FD",
   },
   navbar: {
     width: '100%',
